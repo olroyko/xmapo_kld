@@ -65,7 +65,7 @@ var chaptersNames = [
 	,"Ситуаційні завдання з досліджень кислотно-лужного стану"
 	,"Гемостаз"
 	,"Вітаміни.Лабораторна діагностика невідкладних станів"
-]
+];
 
 
 
@@ -73,16 +73,13 @@ var chaptersNames = [
 if(typeof(Storage) !== "undefined") {
 	// Добавить заголовки разделов
 	for (i = 0; i < chaptersNames.length;i++) {
-		// $("#list").append('<li><a href="chapters/'+(i+1)+'_chapter.html">'+chaptersNames[i]+'</a></li>')
-		$("#list").append('<li id="chapter_'+(i+1)+'"><a   href="chapters/test_chapter.html">'+chaptersNames[i]+'</a></li>')
+		$("#list").append('<li id="chapter_'+(i+1)+'"><a   href="chapters/questions.html">'+chaptersNames[i]+'</a></li>')
 	}
 		
     $("li").on('click', function (event) {
-		alert(event.currentTarget.id);
-		// alert(event.currentTarget.text);	
-		localStorage.setItem("chapterId", event.currentTarget.id);
-		localStorage.setItem("chapterName", event.currentTarget.text);
-		// localStorage.removeItem("chapter");
+		localStorage.setItem("chapterId", event.currentTarget.id);				// Set id of the clicked link into local storage
+		var $textTarget = ($(this).text());										//Get chapter name
+		localStorage.setItem("chapterName", $textTarget);						// Set chapter name into local storage
 		})
 } else {
     alert("Ваш браузер не підтримує об'єкт 'localStorage'. Робота з програмою неможлива.")
