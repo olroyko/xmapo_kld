@@ -9,7 +9,7 @@ These tests based upon the real questions from the "Elex" program.
 
 ### Branches
 Repository holds two branches:
-- gh-pages - distribution branch, try application [here]
+- gh-pages - try application [here]
 - master - branch for developing and testing
 
 ### Basic usage
@@ -30,5 +30,5 @@ MIT
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 
       
-   [here]:<http://olroyko.github.io/pokedex>
+   [here]:<http://olroyko.github.io/xmapo_kld>
 
