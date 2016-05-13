@@ -9,6 +9,76 @@ body {
   margin-left: 20px;
 }
 
+/* The CSS for select*/
+select {
+    padding:3px;
+    margin: 0;
+    border-radius:4px;
+    -webkit-box-shadow:
+            0 3px 0 #ccc,
+            0 -1px #fff inset;
+    background: #f8f8f8;
+    color:#888;
+    border:none;
+    outline:none;
+    display: inline-block;
+    /*-webkit-appearance:none;*/
+    cursor:pointer;
+}
+/*@media screen and (-webkit-min-device-pixel-ratio:0) {*/
+    /*select {padding-right:18px}*/
+    /*label {position:relative}*/
+    /*label:after {*/
+        /*content:'<>';*/
+        /*font:11px "Consolas", monospace;*/
+        /*color:#aaa;*/
+        /*-webkit-transform:rotate(90deg);*/
+        /*position:absolute;*/
+        /*right:4px;*/
+        /*top:2px;*/
+        /*padding:0 0 2px;*/
+        /*pointer-events:none;*/
+        /*border-bottom:1px solid #ddd;*/
+    /*}*/
+/*}*/
+
+
+/*Bootstrap panel*/
+.panel {
+    font-size: larger;
+    padding-left: 0px;
+    padding-right: 0px;
+    border-left-width: 4px;
+    border-right-width: 4px;
+    font-family: "Pacifico",cursive;
+}
+.panel-heading {
+    font-weight: 600;
+}
+.panel-body {
+    padding: 8px 15px ;
+}
+#qw {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-left: 10px;
+}
+#qw ~ div {
+    margin-top: 4px;
+}
+#qw + button {
+    margin-top: -3px;
+    font-family: "Pacifico",cursive;
+    font-size: 16px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-left: 10px;
+}
+/*Tooltips*/
+div .tooltip-here {
+    width: 50%;
+}
+
 /*Ordered list css*/
 ol {
     counter-reset: li; /* Initiate a counter */
@@ -107,6 +177,9 @@ ol ol {
 /*Question*/
 .question-block {
     border-top: 1px solid #b6b6b6;
+    padding: 20px 20px 20px 27px;
+}
+.question-block-item {
     padding: 20px 20px 20px 27px;
 }
 .blue-border {
@@ -311,4 +384,41 @@ ul {
 }
 a:hover {
     text-decoration: none;
+}
+
+/*Test results*/
+
+#results-block {
+    display: none;
+}
+.question-name {
+    font-size: 18px;
+}
+.question-name .fa {
+    margin-left: 10px;
+}
+.correct-result-qw {
+    color: #4cae4c;
+}
+.wrong-result-qw {
+    color: #d9534f;
+}
+.correct-answer {
+    color: #4cae4c;
+    font-weight: 700;
+}
+.btn-group {
+    margin-bottom: 10px;
+    padding-left: 27px;
+}
+.accordion-expand-holder {
+    padding-left: 27px;
+}
+.accordion-expand-holder a {
+    color: #e8902c;
+    font-weight: 700;
+}
+/*Footer*/
+footer {
+    text-align: right;
 }

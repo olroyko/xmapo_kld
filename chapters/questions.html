@@ -1,97 +1,112 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta charset="UTF-8">
-		<link rel="stylesheet" type="text/css" href="../vendor/jquery.countdown/jquery.countdown.css">
-		<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-		<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-		<link href="../vendor/MultiElementSelection/css/component.css" rel="stylesheet">
-		<link href="../vendor/hover_css/hover.css" rel="stylesheet">
-		<link href="../vendor/animate/animate.css" rel="stylesheet">
-		<link href="../styles/custom.css" rel="stylesheet">
-	</head>
-	<body>
-		<nav class="navbar navbar-inverse navbar-fixed-top">
-			<div class="container">
-				<div class="navbar-header">
-					<p class="navbar-brand">В допомогу студентам</p>
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="../vendor/jquery.countdown/jquery.countdown.css">
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/cupertino/jquery-ui.css">
+	<link href="../vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<link href="../vendor/MultiElementSelection/css/component.css" rel="stylesheet">
+	<link href="../vendor/hover_css/hover.css" rel="stylesheet">
+	<link href="../vendor/animate/animate.css" rel="stylesheet">
+	<link href="../styles/custom.css" rel="stylesheet">
+	<title>Клінічна лабораторна діагностика</title>
+</head>
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+	<div class="container">
+		<div class="navbar-header">
+			<p class="navbar-brand">В допомогу студентам</p>
+		</div>
+	</div>
+</nav>
+<div class="container">
+	<div class="row">
+		<div class="chapter-name">
+			<h2>Загальні питання клінічної лабораторної діагностики</h2>
+		</div>
+
+		<div class="wrap-progress">
+			<div class="bar">
+				<div class="percent">
+					<span style="width: 100%;"></span>
 				</div>
-			</div>
-		</nav>
-		<div class="container">
-			<div class="row">
-				<div class="chapter-name">
-					<h2>Загальні питання клінічної лабораторної діагностики</h2>
+				<div class="circle">
+					<span>0%</span>
 				</div>
-
-				<div class="wrap-progress">
-					<div class="bar">
-						<div class="percent">
-							<span style="width: 100%;"></span>
-						</div>
-						<div class="circle">
-							<span>0%</span>
-						</div>
-					</div>
-				</div>
-				<div class="question-number">
-					<div class="countdown-block">
-						<table>
-							<tr>
-								<td id="text">Витрачено часу:</td>
-								<td id="countdown"></td>
-							</tr>
-						</table>
-					</div>
-
-					<!--<div class="progress-header">-->
-						<!--Виконано-->
-					<!--</div>-->
-					<!--<div class="progress">-->
-						<!--<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="min-width: 0em;width: 0%;">-->
-							<!--0%-->
-						<!--</div>-->
-					<!--</div>-->
-
-					<h3 id="test_status"></h3>
-
-				</div>
-				<div class="question-block">
-					<div class="blue-border">
-						<h4 id="question"></h4>
-					</div>
-				</div>
-
-				<form class="me-select">
-					<fieldset id="test">
-					</fieldset>
-				</form>
-				<!--<span id="countdown"></span>-->
-				<h4 id="only-border">
-
-				</h4>
-				<h4 id="chapters-link" >
-					<a class="hvr-underline-from-left" href="../index.html">До переліку розділів</a>
-				</h4>
-
 			</div>
 		</div>
-		<!--<form class="me-select">-->
-			<!--<ul id="me-select-list">-->
-				<!--<li><input id="cb1" name="cb1" type="checkbox"><label for="cb1"><span>Mary Jane</span></label></li>-->
-				<!--<li><input id="cb2" name="cb2" type="checkbox"><label for="cb2"><span>Carrie Johnston</span><span>Design Mockups for Fancy Burger</span><span>08:16 pm</span></label></li>-->
+		<div class="question-number">
+			<div class="countdown-block">
+				<table>
+					<tr>
+						<td id="text">Витрачено часу:</td>
+						<td id="countdown"></td>
+					</tr>
+				</table>
+			</div>
 
-			<!--</ul>-->
-		<!--</form>-->
+			<h3 id="test_status"></h3>
 
-		<script type="text/javascript" src="../vendor/jquery-2.2.0.min.js"></script>
-		<script type="text/javascript" src="../vendor/jquery.countdown/jquery.plugin.min.js"></script>
-		<script type="text/javascript" src="../vendor/jquery.countdown/jquery.countdown.js"></script>
-		<script type="text/javascript" src="../vendor/MultiElementSelection/js/magicselection.js"></script>
-		<script type="text/javascript" src="../scripts/main.js"></script>
-		<!-- <script type="text/javascript" src="34_questions.js"></script> -->
+		</div>
+		<div class="question-block">
+			<div class="blue-border">
+				<h4 id="question"></h4>
+			</div>
+		</div>
 
-	</body>
+		<form class="me-select">
+			<fieldset id="test">
+			</fieldset>
+		</form>
+
+		<div id="results-block">
+			<hr>
+			<p class="accordion-expand-holder">
+				<a class="accordion-expand-all" href="#">Розгорнути все</a>
+			</p>
+			<div class="btn-group" role="group" aria-label="...">
+				<button type="button" class="btn btn-success">Вірні відповіді - <span class="fa fa-thumbs-o-up"></span></button>
+				<button type="button" class="btn btn-danger">Не вірні відповіді - <span class="fa fa-thumbs-o-down"></span></button>
+				<button type="button" class="btn btn-info">Всі відповіді</span></button>
+			</div>
+		</div>
+		<!--<span id="countdown"></span>-->
+		<h4 id="only-border">
+
+		</h4>
+		<h4 id="chapters-link" >
+			<a class="hvr-underline-from-left" href="../index.html">До переліку розділів</a>
+		</h4>
+
+
+
+	</div>
+
+	<hr>
+
+	<footer>
+		<p>Copyright &copy 2016 <a href="http://olroyko.pp.ua/">olroyko.pp.ua</a></p>
+	</footer>
+
+</div>
+<!--<form class="me-select">-->
+<!--<ul id="me-select-list">-->
+<!--<li><input id="cb1" name="cb1" type="checkbox"><label for="cb1"><span>Mary Jane</span></label></li>-->
+<!--<li><input id="cb2" name="cb2" type="checkbox"><label for="cb2"><span>Carrie Johnston</span><span>Design Mockups for Fancy Burger</span><span>08:16 pm</span></label></li>-->
+
+<!--</ul>-->
+<!--</form>-->
+
+<script type="text/javascript" src="../vendor/jquery-2.2.0.min.js"></script>
+<script type="text/javascript" src="../vendor/jquery.countdown/jquery.plugin.min.js"></script>
+<script type="text/javascript" src="../vendor/jquery.countdown/jquery.countdown.js"></script>
+<script type="text/javascript" src="../vendor/MultiElementSelection/js/magicselection.js"></script>
+<script type="text/javascript" src="../vendor/notify.min.js"></script>
+<script type="text/javascript" src="../scripts/main.js"></script>
+<!-- <script type="text/javascript" src="34_questions.js"></script> -->
+
+</body>
 </html>
 
 <!-- https://www.youtube.com/watch?v=d_UuOVhuCF8 -->

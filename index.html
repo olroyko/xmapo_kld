@@ -1,75 +1,101 @@
 <!DOCTYPE html>
 <html lang="uk">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="icon" href="../../favicon.ico">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="icon" href="../../favicon.ico">
 
-    <title>Клінічна лабораторна діагностика</title>
+  <title>Клінічна лабораторна діагностика</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <!--<link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">-->
+  <link href="vendor/zebra_tooltips/public/css/zebra_tooltips.css" rel="stylesheet">
+  <link href="vendor/hover_css/hover.css" rel="stylesheet">
+  <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+  <!--<link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">-->
 
-    <!-- Custom styles for this template -->
-    <link href="styles/custom.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="styles/custom.css" rel="stylesheet">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->
-  </head>
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
 
-  <body>
+<body>
 
-    <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <p class="navbar-brand"> В допомогу студентам</p>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container">
+    <div class="navbar-header">
+      <p class="navbar-brand"> В допомогу студентам</p>
+    </div>
+  </div>
+</nav>
+
+<!-- Main jumbotron for a primary marketing message or call to action -->
+<div class="jumbotron">
+  <div class="container">
+    <h1>Тестування</h1>
+    <p>ПІДГОТОВКА ДО ТЕСТУВАННЯ З ФАХУ КЛІНІЧНА ЛАБОРАТОРНА ДІАГНОСТИКА.</p>
+    <div class="container">
+      <div class="row">
+        <div class="panel panel-info col-md-6">
+          <div class="panel-heading">Оберіть спосіб тестування:</div>
+          <div class="panel-body">
+            <span class="tooltip-here" title="Ви можете обрати деяку кількість питань або всі. При цьому перелік питань буде сформовано у випадковій послідовності.">- випадковий перелік питань:</span>
+            <select name="qw-quantity" id="qw">
+              <option value="" disabled>Оберіть тут</option>
+              <option value="20">20 питань</option>
+              <option value="50">50 питань</option>
+              <option value="100">100 питань</option>
+              <option value="all">Всі питання</option>
+            </select>
+            <button id="start-test" type="button" class="btn btn-primary hvr-sweep-to-bottom">Розпочати</button>
+            <div class="tooltip-here" title="Ви можете обрати будь-який розділ зі списку нижче.">- питання по розділам</div>
+          </div>
+        </div>
+        <div class="panel panel-info col-md-6">
+          <div class="panel-heading">Інформація про тести</div>
+          <div class="panel-body">Загальна кількість розділів - 39</div>
+          <div class="panel-body">Загальна кількість питань - 970</div>
         </div>
       </div>
-    </nav>
-
-    <!-- Main jumbotron for a primary marketing message or call to action -->
-    <div class="jumbotron">
-      <div class="container">
-        <h1>Тестування</h1>
-        <p>ПІДГОТОВКА ДО ТЕСТУВАННЯ З ФАХУ КЛІНІЧНА ЛАБОРАТОРНА ДІАГНОСТИКА.</p>
-
-      </div>
     </div>
+  </div>
+</div>
 
-    <div class="container">
-      <!-- Chapters -->
-      <div class="row">
-        <ol class="rounded-list" id="list">
-        </ol>
-      </div>
-
-
-      <hr>
-
-      <footer>
-        <p>&copy; 2016 olroyko.pp.ua</p>
-      </footer>
-    </div> <!-- /container -->
+<div class="container">
+  <!-- Chapters -->
+  <div class="row">
+    <ol class="rounded-list" id="list">
+    </ol>
+  </div>
 
 
-    <!-- Bootstrap core JavaScript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
-    <script>window.jQuery || document.write('<script src="vendor/jquery-2.2.0.min.js"><\/script>')</script>
-    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-    <script src="scripts/start.js"></script>
-    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <!--<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>-->
-  </body>
+  <hr>
+
+  <footer>
+    <p>Copyright &copy 2016 <a href="http://olroyko.pp.ua/">olroyko.pp.ua</a></p>
+  </footer>
+</div> <!-- /container -->
+
+
+<!-- Bootstrap core JavaScript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+<script>window.jQuery || document.write('<script src="vendor/jquery-2.2.0.min.js"><\/script>')</script>
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<script src="vendor/zebra_tooltips/public/javascript/zebra_tooltips.js"></script>
+<script src="scripts/start.js"></script>
+<!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+<!--<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>-->
+</body>
 </html>
