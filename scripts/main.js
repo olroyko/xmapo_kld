@@ -42,18 +42,18 @@ var qwQuestions = localStorage.getItem('questions_qw');
 if (qwQuestions == 20) {
 	questions.shuffle();
 	questions.splice(20,1000);
-	localStorage.removeItem('questions_qw');								// Remove item from localStorage else all arrays will be shuffled
+	//localStorage.removeItem('questions_qw');								// Remove item from localStorage else all arrays will be shuffled
 } else if (qwQuestions == 50) {
 	questions.shuffle();
 	questions.splice(50,1000);
-	localStorage.removeItem('questions_qw');
+	//localStorage.removeItem('questions_qw');
 } else if (qwQuestions == 100) {
 	questions.shuffle();
 	questions.splice(100,1000);
-	localStorage.removeItem('questions_qw');
+	//localStorage.removeItem('questions_qw');
 } else if (qwQuestions == 'all') {
 	questions.shuffle();
-	localStorage.removeItem('questions_qw');
+	//localStorage.removeItem('questions_qw');
 }
 
 // MAIN BLOCK TO RENDER QUESTIONS
