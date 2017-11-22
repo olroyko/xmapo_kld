@@ -220,13 +220,15 @@ function buildForm() {
 	$("input:eq(4)").val('E');
 	$("input:eq(5)").val('F');
 
-	if(pos !== 0){
+
+    if(pos !== 0){
 		test.innerHTML += "<button type='button' id='back' class='action-button shadow animate blue' onclick='backButton()'>Назад</button>";
 	}
 	test.innerHTML += "<button id='next' class='action-button shadow animate blue' onclick='checkAnswer()'>Далі</button>";
-	test.innerHTML += "<button type='button' id='check' class='action-button shadow animate red'>Перевірити</button>";
+	test.innerHTML += "<button type='button' id='check' class='action-button shadow animate red'>Перевірити</button></div>";
 	$('#check').on('click', displayCorrect);
 	$('#back').on('click', changeProgressBarValue);						// Change progress bar for BACK button
+
 }
 
 

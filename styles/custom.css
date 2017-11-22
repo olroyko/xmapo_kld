@@ -4,8 +4,8 @@ body {
   padding-bottom: 20px;
     background-image: url("../img/geometry2_background.png");
 }
-.list {
-    width: 90%;
+.chapters_list {
+    max-width: 90%;
 }
 
 #list li {
@@ -425,4 +425,29 @@ a:hover {
 /*Footer*/
 footer {
     text-align: right;
+}
+
+/*Responsive updates*/
+@media only screen and (max-width: 768px) {
+    .header_wrapper {
+        width: 90%;
+        margin-left: 20px;
+    }
+    .question-number {
+        border-bottom: 0;
+    }
+    .countdown-block {
+        margin-top: -2px;
+    }
+    .me-select input[type="checkbox"]:checked + label::after {
+        /*Checkbox size*/
+        font-size: larger;
+    }
+    #next, #back, #check {
+        margin: 10px auto;
+        width: 200px;
+    }
+    #test {
+        display: flex;
+    }
 }
