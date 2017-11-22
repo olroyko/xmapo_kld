@@ -109,8 +109,8 @@ function renderQuestion(){
 		return answers != "A" && answers != "B" && answers != "C" && answers != "D" && answers != "E" && answers != "F";
 	});
 
-	buildForm();																// Отобразить варианты ответов и заполнить их value
-	//http://keith-wood.name/countdown.html										// Параметры и вызов для счетчика
+	buildForm();																// Display answer variants and fill their value
+	//http://keith-wood.name/countdown.html										// Counter parameters
 	var now = new Date();
 	$('#countdown').countdown({since: now, compact: true, format: 'HMS'});
 	changeProgressBarValue();													// Call progress bar function
@@ -141,7 +141,7 @@ function checkAnswer(){
 	choices = document.getElementsByName("choices");
 	for(var i=0; i<choices.length; i++){
 		if(choices[i].checked){
-			choice = choice.concat(choices[i].value);							//	если указан флаг, то добавить в массив
+			choice = choice.concat(choices[i].value);							//	if checked add to array
 
 		}
 	}
@@ -158,7 +158,7 @@ function checkAnswer(){
 }
 
 
-function displayCorrect() {														//Выделить правильные ответы по кнопке "Проверить"
+function displayCorrect() {														//Mark correct answers by "Check button"
 	for(i = 0; i < answersArray.length; i++) {
 		if(answersArray[i] !== undefined){
 			var $input = $("input[value='"+answersArray[i]+"']");
@@ -180,7 +180,7 @@ function backButton() {
 	//console.log("Вопросы - ", questionsArray);
 	//console.log("Ответы - ", answersArray);
 
-	var lastQuestion = results[pos];											// Удалить запись из массива ответов и вернуть верное кол-во правильных	ответов
+	var lastQuestion = results[pos];											// Remove the row from the answers array and show the correct quantity
 	if(lastQuestion) {
 		correct--;
 		results.splice(-1,1);													// Delete last item in the array
@@ -196,7 +196,7 @@ function backButton() {
 	userAnswersForArray.splice(-1,1);
 }
 
-//Заполнить форму вариантами ответов и добавить кнопки управления
+//Fill the form by answer variants and add manage buttons
 function buildForm() {
 	answersArray = questions[pos].filter(function(questions) {
 		return questions == "A" || questions == "B" || questions == "C" || questions == "D" || questions == "E" || questions == "F";
@@ -294,7 +294,7 @@ function getUserAnswersForTestResults () {									// Get USER answers into arra
 	choices = document.getElementsByName("choices");
 	for(var i=0; i<choices.length; i++){
 		if(choices[i].checked){
-			userAnswersSet = userAnswersSet.concat(choices[i].value).toString();		//	Если указан флаг, то добавить в массив
+			userAnswersSet = userAnswersSet.concat(choices[i].value).toString();		//	If checked, add to array
 		}
 	}
 	userAnswersForArray.push(userAnswersSet);

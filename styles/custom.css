@@ -4,6 +4,10 @@ body {
   padding-bottom: 20px;
     background-image: url("../img/geometry2_background.png");
 }
+.list {
+    width: 90%;
+}
+
 #list li {
   font-size: 18px;
   margin-left: 20px;
