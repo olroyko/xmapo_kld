@@ -435,6 +435,9 @@ footer {
     }
     .question-number {
         border-bottom: 0;
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center
     }
     .countdown-block {
         margin-top: -2px;
@@ -449,6 +452,9 @@ footer {
     }
     #test {
         display: flex;
+    }
+    #test h2 {
+        text-align: center;
     }
     .me-select {
         width: 90%;
