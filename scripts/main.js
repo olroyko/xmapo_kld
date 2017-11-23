@@ -228,10 +228,17 @@ function buildForm() {
 	test.innerHTML += "<button type='button' id='check' class='action-button shadow animate red'>Перевірити</button></div>";
 	$('#check').on('click', displayCorrect);
 	$('#back').on('click', changeProgressBarValue);						// Change progress bar for BACK button
-    $('#back,#next').click(function() {
-        $('html, body').animate({scrollTop: 80},1500);
-        return false;
-    });                                                //Scroll to top
+
+    var mql = window.matchMedia('all and (max-width: 468px)');          //Scroll to top for responsive
+    if (mql.matches) {
+        $('#back,#next').click(function() {
+            $('html, body').animate({scrollTop: 200},1000);
+            return false;
+        });
+    } else {
+        // NO, window size more than 468px (do nothing)
+    }
+
 }
 
 

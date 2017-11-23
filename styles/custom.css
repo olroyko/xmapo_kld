@@ -450,4 +450,16 @@ footer {
     #test {
         display: flex;
     }
+    .me-select {
+        width: 90%;
+    }
+    .btn-group {
+        display: flex;
+        flex-flow: column;
+        max-width: 80%;
+        padding-left: 70px;
+    }
+    .btn {
+        border-radius: 4px !important;
+    }
 }
