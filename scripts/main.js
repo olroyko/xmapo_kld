@@ -228,7 +228,10 @@ function buildForm() {
 	test.innerHTML += "<button type='button' id='check' class='action-button shadow animate red'>Перевірити</button></div>";
 	$('#check').on('click', displayCorrect);
 	$('#back').on('click', changeProgressBarValue);						// Change progress bar for BACK button
-
+    $('#back,#next').click(function() {
+        $('html, body').animate({scrollTop: 80},1500);
+        return false;
+    });                                                //Scroll to top
 }
 
 
@@ -521,6 +524,9 @@ function initAccordion () {
 		}
 	});
 }
+
+
+
 
 window.addEventListener("load", renderQuestion, false);
 
