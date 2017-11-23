@@ -3,6 +3,7 @@ body {
   padding-top: 50px;
   padding-bottom: 20px;
     background-image: url("../img/geometry2_background.png");
+    font-family: monospace;
 }
 .chapters_list {
     max-width: 90%;
